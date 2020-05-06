@@ -1,0 +1,19 @@
+i {
+  text-align: left;
+  width: 1.3em;
+  font-size: larger;
+  margin-bottom: 4px;
+}
+
+.settings {
+  transition: max-height ease .3s;
+  overflow-y: hidden;
+}
+
+.visible {
+  max-height: 140px;
+}
+
+.invisible {
+  max-height: 0px;
+}

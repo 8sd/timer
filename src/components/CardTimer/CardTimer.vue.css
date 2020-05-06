@@ -1,0 +1,18 @@
+button {
+  margin: .3em;
+}
+
+.cardTimer {
+  transition: max-height .2s ease-in;
+}
+
+.center {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visible {
+  max-height: 50px;
+  overflow-y: hidden;
+}

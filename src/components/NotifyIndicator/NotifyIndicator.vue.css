@@ -1,0 +1,18 @@
+div {
+  display: block ruby;
+  width: 100vw; 
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  transition: max-height linear 2s;
+  max-height: 50px;
+}
+
+.invisible {
+  max-height: 0;
+  overflow-y: hidden;
+}
+
+.spacer {
+  margin: 0 .3em;
+}

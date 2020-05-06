@@ -19,3 +19,10 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+src/components/.template/
+public/legal.htm
+todo.md
+package-lock.json
+timer.tar.gz
+icon.sh

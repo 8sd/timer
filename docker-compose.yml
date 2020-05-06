@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  etherpad:
+    image: timer
+    ports:
+      - "127.0.0.1:9110:5000"
+    restart: always
+~                                    
