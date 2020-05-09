@@ -139,7 +139,12 @@ export default {
       this.duration += 60000;
       this.pause();
       this.play();
-    }
+    },
+    substractMinute () {
+      this.duration -= 60000;
+      this.pause();
+      this.play();
+    },
   },
   computed: {
     Label () {

@@ -16,6 +16,8 @@
         </v-btn>
         <v-btn icon :style="label == null ? 'visibility: hidden;' : ''" @click="addMinute"><i class="fas fa-plus"></i>
         </v-btn>
+        <v-btn icon :style="label == null ? 'visibility: hidden;' : ''" @click="substractMinute"><i class="fas fa-minus"></i>
+        </v-btn>
         <!--TODO total time elapsed-->
       </div>
     </div>
