@@ -20,7 +20,7 @@
       <span style="margin: .5em"></span>
 
       <validation-provider rules="required|numeric" v-slot="{ errors }">
-        <v-text-field v-model="seconds" label="Seconds" type="number" min="0"  required
+        <v-text-field v-model="seconds" label="Seconds" type="number" min="-1"  required
           :error-messages="errors"/>
       </validation-provider>
       <span style="display:flex;align-items:flex-end;margin-bottom: 14px">

@@ -54,8 +54,18 @@ export default {
   },
   watch: {
     seconds (v,o) {
-      if (v < 0)
+      if (v == -1 && o == 0) {
+        if (this.minutes === 0) {
+          this.$nextTick(function() {
+            this.seconds = 0;
+          });
+        } else {
+          this.minutes -= 1;
+          this.seconds = 59;
+        }
+      } else if (v < 0)
         this.seconds = Math.abs(v);
+
       if (v == 60 && o == 59) {
         this.minutes += 1;
         this.seconds = 0;
