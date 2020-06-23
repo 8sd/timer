@@ -13,6 +13,10 @@ export default {
   },
   props: {},
   methods: {
+    load: function () {
+      let profiles = Cookies.getJSON('profiles');
+      this.profiles = profiles === undefined ? {} : profiles;
+    },
     store: function () {
       if (this.$store.state.timers && this.$store.state.timers.length >= 0){
         this.profiles[this.profileName] = this.$store.state.timers;
@@ -26,7 +30,9 @@ export default {
     remove: function () {
       delete this.profiles[this.profileName];
       Cookies.set('profiles', this.profiles);
+      this.profiles = [];
       this.renderKey += 1;
+      this.load();
     }
   },
   computed: {
@@ -35,8 +41,8 @@ export default {
     }
   },
   created: function (){
-    let profiles = Cookies.getJSON('profiles');
-    this.profiles = profiles === undefined ? {} : profiles;
+    this.load();
     console.log('type: ', typeof this.profiles)
+    console.log('type: ', this.profiles)
   }
 }
