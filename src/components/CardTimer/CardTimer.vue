@@ -9,12 +9,6 @@
         <v-btn icon @click="remove">
           <i class="fas fa-trash-alt"></i>
         </v-btn>
-        <!--
-
-  <v-btn :disabled="false"><i class="fas fa-pause"></i></v-btn>
-  <v-btn :disabled="false"><i class="fas fa-stop"></i></v-btn>
-  <v-btn :style="''"><i class="fas fa-forward"></i></v-btn>
-  -->
       </div>
     </div>
   </div>
