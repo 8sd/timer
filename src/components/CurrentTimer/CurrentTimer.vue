@@ -14,6 +14,8 @@
             class="fas fa-stop"></i></v-btn>
         <v-btn icon :style="label == null ? 'visibility: hidden;' : ''" @click="next"><i class="fas fa-forward"></i>
         </v-btn>
+        <v-btn icon :style="label == null ? 'visibility: hidden;' : ''" @click="repeat = !repeat"><v-icon>mdi-repeat{{repeat ? '' : '-off' }}</v-icon>
+        </v-btn>
         <v-btn icon :style="label == null ? 'visibility: hidden;' : ''" @click="addMinute"><i class="fas fa-plus"></i>
         </v-btn>
         <v-btn icon :style="label == null ? 'visibility: hidden;' : ''" @click="substractMinute"><i class="fas fa-minus"></i>

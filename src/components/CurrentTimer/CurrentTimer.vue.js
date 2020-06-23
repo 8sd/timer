@@ -25,7 +25,9 @@ export default {
       
       playingstarted: null,
       passedDisplayTime: null,
-      passedTimeBeforePause: 0
+      passedTimeBeforePause: 0,
+
+      repeat: false
     }
   },
   methods: {
@@ -109,6 +111,15 @@ export default {
           console.log(this.notify);
         }
       }
+      
+      let label = '';
+      let duration = '';
+      let msg = '';
+      if(this.repeat) {
+        label = this.label;
+        duration = this.duration;
+        msg = this.msg;
+      }
 
       this.label = null;
       this.duration = null;
@@ -123,6 +134,15 @@ export default {
       this.passedDisplayTime = null;
       this.passedTimeBeforePause = 0;
       /*Reset everything*/
+
+      if(this.repeat) {
+        this.label = label;
+        this.duration = duration;
+        this.msg = msg;
+        this.state = 'new';
+        this.play();
+        return;
+      }
 
       if(this.state === 'play') {
         console.debug('starting next timer');
