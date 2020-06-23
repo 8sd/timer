@@ -36,7 +36,8 @@ export default {
         this.label = '';
         this.minutes = 0;
         this.seconds = 0;
-        this.$refs.observer.reset()
+        this.$refs.observer.reset();
+        this.$refs.label_timer.focus(); 
       }
     },
     toggleSettings: function () {

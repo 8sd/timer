@@ -4,7 +4,7 @@
   <ValidationObserver ref="observer">
     <div class="in">
       <validation-provider rules="required" v-slot="{ errors }">
-        <v-text-field v-model="label" label="Label" prepend-icon="fa-tag" required :error-messages="errors" />
+        <v-text-field v-model="label" label="Label" prepend-icon="fa-tag" required :error-messages="errors" autofocus ref="label_timer"/>
       </validation-provider>
     </div>
 
