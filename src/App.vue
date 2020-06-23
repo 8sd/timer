@@ -27,7 +27,7 @@
     </div>
     <div class="github">
       <a href="https://github.com/8sd/timer">
-        <v-icon color="grey" dark style="z-index: 10">fab fa-github</v-icon>
+        <v-icon color="grey" dark style="z-index: 10; margin: 8px">fab fa-github</v-icon>
       </a>
     </div>
   </v-app>
