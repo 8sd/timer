@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Title />
-    <v-card width="80%" class="mx-auto">
+    <v-card width="80%" max-width="800px" class="mx-auto">
       <AddTimer />
       <v-divider />
       <Settings />
