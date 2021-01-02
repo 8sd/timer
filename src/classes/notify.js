@@ -20,6 +20,7 @@ class Notify {
     if ("Notification" in window && Notification) {
       if (Notification.permission === 'default') {
       Notification.requestPermission().then(function(permission) { 
+        // eslint-disable-next-line no-console
         console.log(permission);
        });
       } else {
