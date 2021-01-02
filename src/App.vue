@@ -12,17 +12,15 @@
     </v-card>
     
     <div class="infotooltip">
-      <v-tooltip right>
-        <template v-slot:activator="{ on }">
-          <v-icon color="grey" dark v-on="on" @click="showNotifyIndicator = !showNotifyIndicator" style="z-index: 10">fas fa-info-circle</v-icon>
-        </template>
-        <span>Timer-Icon made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></span>
-      </v-tooltip>
+      <v-icon color="grey" dark @click="showNotifyIndicator = !showNotifyIndicator" style="z-index: 10">fas fa-info-circle</v-icon>
       <NotifyIndicator v-if="showNotifyIndicator"/>
       <div v-else class="legal">
-        <a href="/legal.htm">
-          <v-label color="primary">Legal Notice</v-label>
-        </a> 
+        <v-tooltip top>
+          <template v-slot:activator="{ on }">
+            <v-label color="primary" v-on="on">Legal Notice</v-label>
+          </template>
+          <span>Diese Seite ist noch leer.</span>
+        </v-tooltip>
       </div>
     </div>
     <div class="github">
