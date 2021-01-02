@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Title />
-    <v-card width="80%" max-width="800px" class="mx-auto">
+    <v-card width="80%" max-width="1200px" class="mx-auto" style="z-index: 1;">
       <AddTimer />
       <v-divider />
       <Settings />
@@ -11,8 +11,8 @@
       <Timers />
     </v-card>
     
-    <div class="infotooltip">
-      <v-icon color="grey" dark @click="showNotifyIndicator = !showNotifyIndicator" style="z-index: 10">fas fa-info-circle</v-icon>
+    <div class="infotooltip" style="z-index: 0;">
+      <v-icon color="grey" dark @click="showNotifyIndicator = !showNotifyIndicator">fas fa-info-circle</v-icon>
       <NotifyIndicator v-if="showNotifyIndicator"/>
       <div v-else class="legal">
         <v-tooltip top>
@@ -56,6 +56,13 @@ export default {
   },
   methods: {
 
+  },
+  mounted: function () {
+    const url = new URL(window.location.href)
+    if(url.searchParams.get('timers')) {
+      console.log (JSON.parse(url.searchParams.get('timers')));
+      this.$store.state.timers = JSON.parse(url.searchParams.get('timers'));
+    }
   }
 };
 </script>

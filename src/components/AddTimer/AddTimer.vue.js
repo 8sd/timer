@@ -33,11 +33,15 @@ export default {
       if(this.validInputs) {
         this.$refs.observer.validate()
         this.$store.state.timers.push({label: this.label, duration: this.duration, id: (new Date()).getTime()});
+        let url = new URL(window.location.href);
+        url.searchParams.set('timers', JSON.stringify(this.$store.state.timers));
+        window.history.replaceState(null, '', url.href); // https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
         this.label = '';
         this.minutes = 0;
         this.seconds = 0;
         this.$refs.observer.reset();
         this.$refs.label_timer.focus(); 
+
       }
     },
     toggleSettings: function () {
