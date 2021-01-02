@@ -1,5 +1,7 @@
 {
   "name": "timer",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "vue"
 }
