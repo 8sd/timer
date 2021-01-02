@@ -27,7 +27,8 @@ export default {
       passedDisplayTime: null,
       passedTimeBeforePause: 0,
 
-      repeat: false
+      repeat: false,
+      deactivateAnimation: false
     }
   },
   methods: {
@@ -200,6 +201,7 @@ export default {
     },
     PassedTimeRatio () {
       let ratio = this.duration > 0 ? this.passedDisplayTime * 100000 / this.duration : (this.preparing ? 0 : 100);
+      this.deactivateAnimation = ratio == 0;
       return ratio;
     },
   },

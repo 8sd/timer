@@ -23,7 +23,7 @@
         <!--TODO total time elapsed-->
       </div>
     </div>
-    <progress-bar size="tiny" :val="PassedTimeRatio" bar-transition="all 1s linear"></progress-bar>
+    <progress-bar size="tiny" :val="PassedTimeRatio" :bar-transition="deactivateAnimation?'all 0s linear':'all 1s linear'"></progress-bar>
   </div>
 </template>
 
