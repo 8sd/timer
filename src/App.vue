@@ -12,9 +12,9 @@
     </v-card>
     
     <div class="infotooltip" style="z-index: 0;">
-      <v-icon color="grey" dark @click="showNotifyIndicator = !showNotifyIndicator">fas fa-info-circle</v-icon>
+      <v-icon color="grey" dark @click="showNotifyIndicator = !showNotifyIndicator" style="z-index: 2;">fas fa-info-circle</v-icon>
       <NotifyIndicator v-if="showNotifyIndicator"/>
-      <div v-else class="legal">
+      <div v-else class="legal" style="z-index: 1;">
         <v-tooltip top>
           <template v-slot:activator="{ on }">
             <v-label color="primary" v-on="on">Legal Notice</v-label>
@@ -26,6 +26,12 @@
     <div class="github">
       <a href="https://github.com/8sd/timer">
         <v-icon color="grey" dark style="z-index: 10; margin: 8px">fab fa-github</v-icon>
+      </a>
+    </div>
+
+    <div class="top-right animate__animated animate__tada">
+      <a href="https://www.buymeacoffee.com/duda">
+        <img style="height:2em; width: 2em;" src="/bmc.svg" />
       </a>
     </div>
   </v-app>
@@ -83,6 +89,14 @@ export default {
   bottom: .5em;
   width: 100vw; 
   text-align: center;
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right:0;
+  margin:1em;
+  animation-delay: 15s;
 }
 </style>
 <style>
