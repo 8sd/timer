@@ -14,8 +14,10 @@ export default {
   },
   mounted () {
     this.$nextTick().then(() => {
+        document.getElementById('notificationHint').classList.add('shrinked');
       document.getElementById('notificationHint').addEventListener('animationend', () => {
-        document.getElementById('notificationHint').classList.add('invisible');
+
+        //document.getElementById('notificationHint').classList.add('invisible');
       });
     });
   }

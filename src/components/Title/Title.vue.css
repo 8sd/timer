@@ -12,7 +12,12 @@ img {
 }
 
 #notificationHint {
-  transition: max-height 0.5s ease;
+  transition: height 1s ease 3s;
+  height: 1em;
   margin:0
 }
 
+#notificationHint.shrinked {
+  height: 0em;
+  margin:0
+}
