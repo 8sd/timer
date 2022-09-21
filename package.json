@@ -20,7 +20,7 @@
     "vue": "^2.6.12",
     "vue-simple-progress": "^1.1.1",
     "vuedraggable": "^2.24.3",
-    "vuetify": "^2.4.0",
+    "vuetify": "^2.6.10",
     "vuex": "^3.6.0"
   },
   "devDependencies": {
